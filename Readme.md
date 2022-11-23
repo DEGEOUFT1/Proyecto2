@@ -30,6 +30,6 @@
 3. correr con juan
 
 ### Comentarios:
-- ![MicrosoftTeams-image (2)](https://user-images.githubusercontent.com/104176666/203621471-e03c73b5-c226-4322-8531-07b32414150e.png)
+![MicrosoftTeams-image (2)](https://user-images.githubusercontent.com/104176666/203621471-e03c73b5-c226-4322-8531-07b32414150e.png)
 - Respecto al primer diseño de clases se tuvieron diferentes cambios mientras se hacia el codigo
 
