@@ -2,6 +2,9 @@
 - Diego Mesa Ospina
 - Maria Camila Raigosa
 
+## Vídeo de Sustentación
+- URL:
+
 ## Documentación
 
 ### Descripcion proyecto:
@@ -12,10 +15,6 @@
 
 ### Entorno de Desarrollo:
 - Replit
-
-### Comentarios:
-- ![MicrosoftTeams-image (2)](https://user-images.githubusercontent.com/104176666/203621471-e03c73b5-c226-4322-8531-07b32414150e.png)
-
 
 ## Ejemplos Utilizados
 ### Oraciones válidas
@@ -30,6 +29,7 @@
 2. grande salta un adulto
 3. correr con juan
 
-## Vídeo de Sustentación
+### Comentarios:
+- ![MicrosoftTeams-image (2)](https://user-images.githubusercontent.com/104176666/203621471-e03c73b5-c226-4322-8531-07b32414150e.png)
+- Respecto al primer diseño de clases se tuvieron diferentes cambios mientras se hacia el codigo
 
-URL:
