@@ -14,7 +14,8 @@
 - Replit
 
 ### Comentarios:
-- 
+- ![MicrosoftTeams-image (2)](https://user-images.githubusercontent.com/104176666/203621471-e03c73b5-c226-4322-8531-07b32414150e.png)
+
 
 ## Ejemplos Utilizados
 ### Oraciones válidas
