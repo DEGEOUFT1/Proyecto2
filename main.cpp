@@ -25,7 +25,7 @@ void menu() {
 		cout << "Oración inválida, no se puede tener más de un verbo, adjetivo y/o adverbio en una oración simple" << endl;
 		}
     } else {
-        cout << "La oración ingresada es inválida" << endl;
+        cout << "La oracion ingresada es inválida" << endl;
         cout << "-------------------------------------------------------------------------------------------" << endl;
     }
 }
