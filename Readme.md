@@ -19,17 +19,17 @@
 ## Ejemplos Utilizados
 ### Oraciones válidas
 
-1. el perro corrió rapido
+1. el perro come rapido
 2. los gatos comen bonito con el perro
 3. diego canta con juan
 
 ### Oraciones inválidas
 
-1. maria corre y jaime salta
+1. maria corre y camila salta
 2. grande salta un adulto
 3. correr con juan
 
 ### Comentarios:
 ![MicrosoftTeams-image (2)](https://user-images.githubusercontent.com/104176666/203621471-e03c73b5-c226-4322-8531-07b32414150e.png)
-- Respecto al primer diseño de clases se tuvieron diferentes cambios mientras se hacia el codigo
+- Respecto al primer diseño de clases se tuvieron diferentes cambios mientras se hacia el codigo, como fueron las diferentes funciones que se utilizaron para verificar y los vectores que se utilizaron para poder guardar las palabras a utilizar y la oracion separa en palabras
 
