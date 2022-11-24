@@ -1,6 +1,6 @@
 ## Integrantes
 - Diego Mesa Ospina
-- Maria Camila Raigosa
+- Maria Camila Raigosa Soto
 
 ## Vídeo de Sustentación
 - URL:
