@@ -10,13 +10,13 @@ using namespace std;
 
 ExpressionChecker::ExpressionChecker(){
 	this->articulosDefinidos = {"el", "los", "la", "las"};
-	this->articulosIndefinidos = {"un", "uno", "una", "unas", "unos"};
+	this->articulosIndefinidos = {"un", "una", "unas", "unos"};
 	this->sustantivosImpropios = {"adulto", "adultos", "joven", "jovenes", "perro", "perros", "gato", "gatos", "papá", "papás"};
 	this->sustantivosPropios = {"juan", "diego", "camila", "david", "maria", "ana"};
 	this->verbos = {"juega", "juegan", "jugaron", "jugarán", "come", "comen", "comieron", "comerán", "canta", "cantan","cantaron", "cantarán", "salta", "saltan", "saltaron", "saltarán", "corren",  "corre", "corrió", "correrán"};
 	this->adjetivos = {"grande", "feo", "malo", "bueno","divertido", "rapido", "bonito", "duro"};
-	this->enlace = {"con", "y"};
-	this->palabrasTotal = {"el", "los", "la", "las", "un", "uno", "una", "unas", "unos", "perro", "perros", "gato", "gatos", "papá", "papás", "juan", "diego", "camila", "david", "maria", "ana", "juega", "juegan", "jugaron", "jugarán", "come", "comen", "comieron", "comerán", "canta", "cantan","cantarán", "cantarán", "salta", "saltan", "saltaron", "saltarán", "corren",  "corre", "corrió", "correrán", "grande", "feo", "malo", "bueno","divertido", "rapido", "bonito", "duro", "con","y"};
+	this->enlace = {"con"};
+	this->palabrasTotal = {"el", "los", "la", "las", "un", "uno", "una", "unas", "unos", "perro", "perros", "gato", "gatos", "papá", "papás", "juan", "diego", "camila", "david", "maria", "ana", "juega", "juegan", "jugaron", "jugarán", "come", "comen", "comieron", "comerán", "canta", "cantan","cantarán", "cantarán", "salta", "saltan", "saltaron", "saltarán", "corren",  "corre", "corrió", "correrán", "grande", "feo", "malo", "bueno","divertido", "rapido", "bonito", "duro", "con"};
 }
 
 vector <string> ExpressionChecker::splitString(string &input) {
@@ -24,11 +24,9 @@ vector <string> ExpressionChecker::splitString(string &input) {
 	string token;
 
 	vector<string> expression;
-  
 	while(getline(ss, token, ' ')) {
 		expression.push_back(token);
 	}
-
 	return expression;
 }
 
@@ -55,10 +53,8 @@ bool ExpressionChecker::verificacion1(vector <string> expression){
 		if(expression[1].compare(this->verbos[i]) == 0){
 			containsVerbos = true;
 			break;
-    }
+		}
 	}
-      
-
 
 	if (containsSustantivosPropios || (containsArticulosDefinidos && containsVerbos)){
 		return true;
@@ -245,7 +241,7 @@ bool ExpressionChecker::verificacion6(vector <string> expression){
 		}
 	}
 
-	for(int i = 0; i<this->articulosDefinidos.size(); i++){
+	for( int i = 0; i<this->articulosDefinidos.size(); i++){
 		if(expression[0].compare(this->verbos[i]) == 0){
 			containsArticulosDefinidos = true;
 			break;
@@ -419,11 +415,11 @@ bool ExpressionChecker::verificacionVerbo(vector <string> expression){
 			}
 		}
 	}
-	
+
 	if(c >= 2){
-		return true;
-	} else {
 		return false;
+	} else {
+		return true;
 	}
 }
 
@@ -461,7 +457,48 @@ bool ExpressionChecker::verificacionAdverbio(vector <string> expression){
 	}
 }
 
+bool ExpressionChecker::Inicio(vector <string> expression){
+	bool inicioarticulosDefinidos = false;
+  bool inicioarticulosIndefinidos =false;
+  bool iniciosustantivosPropios= false;
+  bool iniciosustantivosImpropios=false;
+  for(int i = 0; i<this->sustantivosImpropios.size(); i++){
+		if(expression[0].compare(this->sustantivosImpropios[i]) == 0){
+			iniciosustantivosImpropios = true;
+			break;
+		}
+	}
+	for(int i = 0; i<this->sustantivosPropios.size(); i++){
+		if(expression[0].compare(this->sustantivosPropios[i]) == 0){
+			iniciosustantivosPropios = true;
+			break;
+		}
+	}
+  for(int i = 0; i<this->articulosIndefinidos.size(); i++){
+		if(expression[0].compare(this->articulosIndefinidos[i]) == 0){
+			inicioarticulosIndefinidos = true;
+			break;
+		}
+	}
+
+	for(int i = 0; i<this->articulosDefinidos.size(); i++){
+		if(expression[0].compare(this->articulosDefinidos[i]) == 0){
+			inicioarticulosDefinidos= true;
+			break;
+		}
+	}
+	if(inicioarticulosDefinidos||inicioarticulosIndefinidos||iniciosustantivosPropios||iniciosustantivosImpropios){
+		return true;
+	} else {
+		return false;
+	}
+}
+
 bool ExpressionChecker::validar(vector <string> expression){
+	if(this->Inicio(expression) != true){
+		return false;
+	}
+	
 	if(this->verificacionAdjetivo(expression) != true){
 		return false;
 	}
