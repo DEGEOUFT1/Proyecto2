@@ -3,7 +3,7 @@
 #include <vector>
 #include <algorithm>
 #include <sstream>
-#include "ExpressionChecker.h"
+#include "ExpressionAnalyzer.h"
 
 using namespace std;
 
