@@ -29,10 +29,10 @@ class ExpressionChecker {
 		bool verificacion6(vector <string> expression);
 		bool verificacion7(vector <string> expression);
 		bool verificacion8(vector <string> expression);
-
 		bool verificacionVerbo(vector <string> expression);
 		bool verificacionAdjetivo(vector <string> expression);
 		bool verificacionAdverbio(vector <string> expression);
+		bool Inicio(vector <string> expression);
 		bool validar(vector <string> expression);
 		bool basePalabras(vector <string> expression);
 
