@@ -4,7 +4,7 @@
 #include <sstream>
 #include <algorithm>
 #include <iterator>
-#include "ExpressionChecker.h"
+#include "ExpressionAnalyzer.h"
 
 using namespace std;
 
@@ -15,8 +15,8 @@ ExpressionChecker::ExpressionChecker(){
 	this->sustantivosPropios = {"juan", "diego", "camila", "david", "maria", "ana"};
 	this->verbos = {"juega", "juegan", "jugaron", "jugarán", "come", "comen", "comieron", "comerán", "canta", "cantan","cantaron", "cantarán", "salta", "saltan", "saltaron", "saltarán", "corren",  "corre", "corrió", "correrán"};
 	this->adjetivos = {"grande", "feo", "malo", "bueno","divertido", "rapido", "bonito", "duro"};
-	this->enlace = {"con"};
-	this->palabrasTotal = {"el", "los", "la", "las", "un", "uno", "una", "unas", "unos", "perro", "perros", "gato", "gatos", "papá", "papás", "juan", "diego", "camila", "david", "maria", "ana", "juega", "juegan", "jugaron", "jugarán", "come", "comen", "comieron", "comerán", "canta", "cantan","cantarán", "cantarán", "salta", "saltan", "saltaron", "saltarán", "corren",  "corre", "corrió", "correrán", "grande", "feo", "malo", "bueno","divertido", "rapido", "bonito", "duro", "con"};
+	this->enlace = {"con","y"};
+	this->palabrasTotal = {"el", "los", "la", "las", "un", "uno", "una", "unas", "unos", "perro", "perros", "gato", "gatos", "papá", "papás", "juan", "diego", "camila", "david", "maria", "ana", "juega", "juegan", "jugaron", "jugarán", "come", "comen", "comieron", "comerán", "canta", "cantan","cantarán", "cantarán", "salta", "saltan", "saltaron", "saltarán", "corren",  "corre", "corrió", "correrán", "grande", "feo", "malo", "bueno","divertido", "rapido", "bonito", "duro", "con","y"};
 }
 
 vector <string> ExpressionChecker::splitString(string &input) {
